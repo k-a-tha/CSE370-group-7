@@ -6,14 +6,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = sanitize($_POST['email']);
     $password = $_POST['password'];
 
-    // Check if artist exists
-    $query = "SELECT ID, PasswordHash FROM artist WHERE Email = '$email'";
-    $artist = getRow($query);
+    // Check if user exists
+    $query = "SELECT ID, PasswordHash FROM users WHERE Email = '$email'";
+    $user = getRow($query);
 
-    if ($artist && verifyPassword($password, $artist['PasswordHash'])) {
-        $_SESSION['artist_id'] = $artist['ID'];
-        $_SESSION['artist_email'] = $email;
-        $_SESSION['user_type'] = 'artist';
+    if ($user && verifyPassword($password, $user['PasswordHash'])) {
+        $_SESSION['user_id'] = $user['ID'];
+        $_SESSION['user_email'] = $email;
+        $_SESSION['user_type'] = 'user';
         header("Location: ../index.html");
         exit;
     } else {

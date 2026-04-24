@@ -46,33 +46,6 @@ A complete web application for managing, sharing, and discovering comics with us
 18. **DEPICTED_IN** - Fan art character mappings
 19. **USES_ON** - Emoji usage tracking
 
-## Installation
-
-### 1. Setup XAMPP
-- Start Apache and MySQL servers
-- Open phpMyAdmin: `http://localhost/phpmyadmin`
-
-### 2. Create Database
-```sql
-CREATE DATABASE comic_platform;
-USE comic_platform;
-
--- Run all CREATE TABLE statements from your schema
-```
-
-### 3. Configure Database Connection
-Edit `config/db.php` and update:
-```php
-define('DB_PASS', 'your_xampp_password');
-```
-
-### 4. Place Files
-- Copy all project files to `htdocs/CSE370-group-7/`
-
-### 5. Access Application
-```
-http://localhost/CSE370-group-7/
-```
 
 ## File Structure
 ```
@@ -106,30 +79,4 @@ CSE370-group-7/
 - Email uniqueness validation
 - Password confirmation matching
 
-## Design
-- Purple gradient theme (667eea to 764ba2)
-- Dark background for comfortable viewing
-- Responsive mobile-friendly design
-- Hover animations and smooth transitions
-- Inspired by asurascans.com
 
-## Future Extensions
-You can extend this application by creating PHP files for:
-- `chapter.php` - Manage chapters
-- `rating.php` - Handle ratings
-- `forum_post.php` - Manage forum posts
-- `fanart.php` - Handle fan art submissions
-- `livestream.php` - Manage livestreams
-- And more based on your database tables
-
-## Notes
-- Keep code simple and modular
-- Follow the naming convention: filename matches table name
-- Use the utility functions from `config/db.php`
-- Always sanitize user input
-
-## Author
-CSE370 Group 7
-
-## License
-Private Project

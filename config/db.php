@@ -2,7 +2,7 @@
 // Database configuration
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', ''); // Add your XAMPP password here
+define('DB_PASS', ''); 
 define('DB_NAME', 'anya_forger');
 
 // Create connection
